@@ -1,0 +1,236 @@
+body {
+	margin:0;
+}
+
+/*** ==========================
+Left page
+=========================== */
+.left_page{
+	float:left;
+	width:37%;
+	position:fixed;
+	height:100vh;
+}
+
+.description_container {
+  position: absolute;
+  width: 65%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: #4a4a4a;
+    animation: 1s ease-out 0s 1 slideInFromLeft_leftpage;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  
+}
+
+.about2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 550;
+    font-size: 17px;
+    color: #4a4a4a;
+    animation: 1s ease-out .5s 1 slideInFromLeft_leftpage;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.link{
+    font-family: 'Quicksand', sans-serif;
+    color: #3b80fe;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+.social_network {
+  animation: 1s ease-out 1s 1 slideInFromLeft_leftpage;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+
+.copyright{
+  animation: 1s ease-out 1.3s 1 slideInFromLeft_leftpage;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 2%;
+}
+
+
+.mail, .twitter, .github{
+  margin-right: 10px;
+}
+
+.mail:hover, .twitter:hover, .github:hover, .linkedin:hover{
+  opacity: 0.3;
+}
+
+@keyframes slideInFromLeft_leftpage {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/*** ==========================
+Right page
+=========================== */
+
+.right_page {
+	float:right;
+	width:63%;
+}
+
+.right_page .tile {
+	min-height:50px;
+	padding: 65px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.bot_right_text {
+  position:absolute;
+  right:0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.link_to_project{
+  position:absolute;
+  right:0;
+  cursor: pointer;
+  margin-top: -3.8%;
+  z-index: 10;
+}
+
+.link_to_project:hover {
+  opacity: 0.3;
+}
+
+.bot_right_text:hover, .title_summary_close :hover {
+  opacity: 0.3;
+}
+
+.image img{
+	margin: 0 auto;
+  display: block;
+  max-width:100%;
+}
+
+.tile{
+  border-radius: 30px;
+}
+
+.tile_inner {
+  position: relative;
+}
+
+.tile .tile_content, .bot_left_text {
+  opacity:1;
+  transition: opacity 1s;
+}
+
+.tile .tile_summary {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  box-sizing: border-box;
+  opacity:0;
+  transition: opacity 1s;
+  visibility: hidden;
+  
+}
+.tile.active .tile_content, .tile.active .bot_left_text {
+  opacity: .1;
+}
+.tile.active .tile_summary {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tile.active .tile_summary{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 550;
+  font-size: 20px;
+}
+
+.tile.active .project_img, .inner_description1{
+  display: flex;
+  justify-content: center;
+
+}
+
+.tile.active .inner_description1{
+  margin-top: 3%;
+}
+
+.title_summary_close {
+  position:absolute;
+  bottom:14px;
+  right:0;
+  font-size:28px;
+  cursor: pointer;
+}
+
+
+.right_page .tile:nth-child(3n+1) { background-color:#F1E3D3; }
+.right_page .tile:nth-child(3n+2) { background-color:#F1FFC4; }
+.right_page .tile:nth-child(3n+3) {background-color:#FFCAAF;}
+.right_page .tile:nth-child(3n+4) {background-color:#C6E2E9;}
+.right_page .tile:nth-child(3n+5) {background-color:#A7BED3;}
+
+@keyframes slideInFromLeft_rightpage {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.top_left_text, .bot_left_text, .bot_right_text, .link_to_project {
+	font-family: 'Quicksand', sans-serif;
+  font-weight: 550;
+  font-size: 17px;
+  color: #4a4a4a;
+  animation: 1s ease-out 0s 1 slideInFromLeft_rightpage;
+}
+
+
+
+
+@media screen and (max-width:900px) {
+  .left_page {
+    float:none;
+    position:relative;
+    width:100%;
+    height:auto;
+  }
+  .right_page {
+    float:none;
+    width:100%;
+  }
+
+  .description_container {
+    position: relative;
+    transform: translate(-50%, 0);
+    padding: 60px 0;
+  }
+}

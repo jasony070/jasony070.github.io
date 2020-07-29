@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #a8c3f0;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Position of the menu button on the page*/
+body, .nav, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Typewriting effect text*/
+#title{
+    position: absolute;
+    left: center;
+    top: 225px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #fff;
+}
+
+/*checkbox position*/
+.nav {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/*Size of the menu bar extension*/
+.nav input:checked ~ .menu {
+    width: 450px;
+}
+
+/*The menu words positioning*/
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+/*Menu font decoration*/
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: lowercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+/*Menu hover font color*/
+.menu li a:hover {
+    color: #161919;
+}
+
+/*Button click hidden*/
+.nav input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/*Design for 3 lines*/
+.nav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/*Menu exit button color change*/
+.nav input:checked ~ span {
+    background-color: #f974a1;
+}
+
+/*Move top line a bit up (spacing)*/
+.nav span:nth-child(2) {
+    transform: translateY(-13px);
+}
+
+/*Bottom line rotation*/
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+/*Move bottom line a bit down (spacing)*/
+.nav span:nth-child(3) {
+    transform: translateY(13px);
+}
+
+/*Upper line rotation*/
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}

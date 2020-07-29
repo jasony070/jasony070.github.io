@@ -1,0 +1,189 @@
+/*** ==========================
+Header CSS
+=========================== */
+.header{
+    min-height: 180px;
+    background-color: #fff;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    margin-right: 180px;
+}
+
+.header_text{
+	font-family: 'Quicksand', sans-serif;
+    text-align: right;
+}
+
+#name{
+    font-weight: 700;
+    font-size: 45px;
+}
+
+#brief{
+    font-weight: 550;
+    font-size: 18px;
+}
+
+
+h1{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+/*** ==========================
+Text CSS
+=========================== */
+.text{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.head2{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 35px
+}
+
+
+/*** ==========================
+Body CSS
+=========================== */
+#bg-container {
+    /* background-color: #ebf2ff; */
+    background-color: #F5F0F8;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+
+.row.header-row {
+    margin-bottom:0;
+}
+
+
+
+/*** ==========================
+Footer CSS
+=========================== */
+footer {
+    background-color: #fff;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    color:rgb(182, 178, 178); 
+    font-size:20px;
+    font-family: 'Quicksand', sans-serif;
+}
+  
+/*** ==========================
+Photo CSS
+=========================== */
+img {
+    max-width:100%;
+    border-radius: 20px;
+}
+
+.photo {
+    width:50%;
+}
+
+
+.photo-centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-right {
+    float:right;
+}
+
+.row:after {
+    content:" ";
+    clear:both;
+    display:table;
+}
+
+
+#block1 {
+    padding-bottom: 5rem;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius:20px;
+    background-color: #e0ebeb;
+
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#block2 {
+    padding-bottom: 5rem;
+    max-width: 1000px;
+    margin: 0 auto 30px 15px;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius:20px;
+    background-color: #ebebe0;
+
+    animation: 1s ease-out 0.5s 1 slideInFromLeft;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#block3 {
+    padding-bottom: 5rem;
+    max-width: 1000px;
+    margin: 0 15px 30px auto;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius:20px;
+    background-color: #ffece6;
+
+    animation: 1s ease-out 1s 1 slideInFromRight;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+.text_chunk1{
+    width: 65%; 
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@media screen and (max-width:900px) {
+    .header,.text_chunk1,.photo {
+        width:100%
+    }
+    .photo.photo-left,.photo.photo-right {
+        float:none;
+        margin:0 auto;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
