@@ -1,6 +1,6 @@
 // Typewriting effect
 var i=0, title;
-title = "Hello, I'm Jason."
+title = "Hello, I'm Jason Yi."
 
 function typing() {
   if(i<title.length){
