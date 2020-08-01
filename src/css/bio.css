@@ -3,7 +3,7 @@ Header CSS
 =========================== */
 .header{
     min-height: 180px;
-    background-color: #fff;
+    background-color: white;
     animation: 1s ease-out 0s 1 slideInFromRight;
     opacity: 0;
     animation-fill-mode: forwards;
@@ -51,8 +51,9 @@ Text CSS
 Body CSS
 =========================== */
 #bg-container {
-    /* background-color: #ebf2ff; */
-    background-color: #F5F0F8;
+    /* background-color: #F5F0F8; */
+    /* background-color: #F6F8F9; */
+    background-color: white;
     padding-top: 60px;
     padding-bottom: 20px;
 }
